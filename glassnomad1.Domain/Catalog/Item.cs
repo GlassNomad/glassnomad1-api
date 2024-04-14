@@ -11,7 +11,7 @@ namespace glassnomad1.Domain.Catalog
         public decimal Price {get; set;}
 
 
-        public List<Rating> Ratings {get; set;} = new List<Rating>();
+        public List<Rating>? Ratings {get; set;} = new List<Rating>();
          public void AddRating(Rating rating)
         {
             this.Ratings.Add(rating);
@@ -37,10 +37,11 @@ namespace glassnomad1.Domain.Catalog
                 throw new ArgumentException("Price must be greater than zero.");
             }
 
-            Name = name;
+            this.Name = name;
             this.Description = description;
             this.Brand = brand;
             this.Price = price;
+            this.Ratings = new List<Rating>();
         }
 
 
