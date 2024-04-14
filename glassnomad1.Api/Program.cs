@@ -7,9 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source = ../Registrar.sqlite",
- b => b.MigrationsAssembly("glassnomad1.Api"))
- );
+builder.Services.AddDbContext<StoreContext>(options => 
+{
+     options.UseSqlite("Data Source =../Registrar.sqlite",
+ b => b.MigrationsAssembly("glassnomad1.Api"));
+ options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+ });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
