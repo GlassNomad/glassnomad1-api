@@ -14,6 +14,7 @@
 
 <ItemGroup>
   <ProjectReference Include="..\glassnomad1.Domain\glassnomad1.Domain.csproj" />
+  <ProjectReference Include="..\glassnomad1.Data\glassnomad1.Data.csproj" />
 </ItemGroup>
 
 </Project>
