@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 using glassnomad1.Domain.Catalog;
 
 namespace glassnomad1.Api.Controllers {
@@ -17,3 +17,4 @@ namespace glassnomad1.Api.Controllers {
 }
 
 //testing
+*/
