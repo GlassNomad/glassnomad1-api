@@ -1,4 +1,4 @@
-/*using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using glassnomad1.Domain.Catalog;
 
 namespace glassnomad1.Api.Controllers {
@@ -7,14 +7,14 @@ namespace glassnomad1.Api.Controllers {
 	public class CatalogController: ControllerBase{
         [HttpGet]
         public IActionResult GetItems(){
-            var items =new List<Ites>() {
-                new Items("Shirt", "Ohio State Shirt", "Nike", 29.99mm),
-                new Items("Shorts", "Ohio State Shorts", "Nike", 49.99mm),
-            }
+            var items =new List<Item>() {
+                new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m),
+                new Item("Shorts", "Ohio State Shorts", "Nike", 49.99m)
+            };
             return Ok(items);
         }
     }
 }
 
-//testing
-*/
+
+
