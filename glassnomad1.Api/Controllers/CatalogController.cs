@@ -1,19 +1,31 @@
 
 using Microsoft.AspNetCore.Mvc;
 using glassnomad1.Domain.Catalog;
+using glassnomad1.Data;
 
 namespace glassnomad1.Api.Controllers {
     [ApiController]
-	[Route("[controller]")]
+	[Route("/catalog")]
 	public class CatalogController: ControllerBase{
+
+        private readonly StoreContext _db;
+        public CatalogController (StoreContext db){
+                _db = db;
+        }
+
         [HttpGet]
         public IActionResult GetItems(){
+            return Ok(_db.Items);
+        }
+
+        /*public IActionResult GetItems(){
             var items =new List<Item>() {
                 new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m),
                 new Item("Shorts", "Ohio State Shorts", "Nike", 49.99m)
             };
             return Ok(items);
         }
+        */
 
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id){
