@@ -22,13 +22,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+
+
 app.Run();
-
-string authority builderConfiguration ["Auth0: Authority"] ?? 
-throw new ArgumentNullException"Auth0: Authority"); 
-
-string audience builderConfiguration ["Auth0: Audience"] ?? 
-throw new ArgumentNullException"Auth0: Audience");
-
-string storeConnectionString = builder.Configuration.GetConnectionString"StoreConnection") ?? 
-throw new ArgumentNullException "ConnectionString: StoreConnection ";
